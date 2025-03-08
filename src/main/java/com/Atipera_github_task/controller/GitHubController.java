@@ -21,7 +21,7 @@ public class GitHubController {
     private final GitHubService gitHubService;
 
     @GetMapping("/{username}/repos")
-    public ResponseEntity<Uni<List<ReposInfoResponseDto>>> getRepositories(@PathVariable String username) {
-        return ResponseEntity.ok(gitHubService.listNonForkReposByUsername(username));
+    public Uni<List<ReposInfoResponseDto>> getRepositories(@PathVariable String username) {
+        return gitHubService.listNonForkReposByUsername(username);
     }
 }
