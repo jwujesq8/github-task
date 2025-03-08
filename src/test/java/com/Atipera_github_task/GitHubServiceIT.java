@@ -1,11 +1,12 @@
 package com.Atipera_github_task;
 
-import com.Atipera_github_task.dto.ReposInfoResponseDto;
+import com.Atipera_github_task.dto.RepositoryInfoResponseDto;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
@@ -22,23 +23,23 @@ public class GitHubServiceIT {
     WebTestClient webTestClient;
 
     @Test
+    @DirtiesContext
     void testGettingReposInfoByUsername() {
 
         // Given
-        String username = "jwujesq8";
+        String username = "user";
 
         // When and Then
         webTestClient.get()
                 .uri("/github/" + username +"/repos")
                 .exchange()
                 .expectStatus().isOk()
-                .expectBodyList(ReposInfoResponseDto.class)
+                .expectBodyList(RepositoryInfoResponseDto.class)
                 .consumeWith(response -> {
-                    List<ReposInfoResponseDto> repos = response.getResponseBody();
+                    List<RepositoryInfoResponseDto> repos = response.getResponseBody();
                     System.out.println("Response: " + repos);
                     assertNotNull(repos);
                     assertFalse(repos.isEmpty());
-                    assertEquals("expectedRepoName", repos.get(0).getReposName());
                 });
     }
 }

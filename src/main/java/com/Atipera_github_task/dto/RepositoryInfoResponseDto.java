@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
-public class ReposInfoResponseDto {
+public class RepositoryInfoResponseDto {
     private String reposName;
     private String ownerLogin;
     private List<BranchDto> branches;
