@@ -52,7 +52,7 @@ This service allows users to fetch a list of repositories for a given GitHub use
   curl -X GET "http://localhost:8080/github/{username}/repos"
 
 ## Responses
-1. 200 - OK
+1. 200 - OK, example:
     ````JSON
    {
         "reposName": "SQL",
@@ -67,7 +67,7 @@ This service allows users to fetch a list of repositories for a given GitHub use
         ]
     }
 
-2. 404 - User not found
+2. 404 - User not found, example:
    ````JSON
    {
         "status": "404",
