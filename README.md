@@ -14,11 +14,15 @@ This service allows users to fetch a list of repositories for a given GitHub use
 - [Responses](#responses)
 
 ## Installation
-To install this project, clone it and install the required dependencies.
-  
-     ```bash
-     git clone https://github.com/jwujesq8/github-task
-
+1. To install this project, clone it:
+  ````bash
+  git clone https://github.com/jwujesq8/github-task.git
+  ````
+2. Navigate into the project folder
+3. Install dependencies using Maven:
+  ````bash
+  mvn install
+  ````
 ## Prerequisites
 - Java 21
 - Maven
