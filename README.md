@@ -15,8 +15,9 @@ This service allows users to fetch a list of repositories for a given GitHub use
 
 ## Installation
 To install this project, clone it and install the required dependencies.
-     ````bash
-  git clone https://github.com/jwujesq8/github-task
+  
+     ```bash
+     git clone https://github.com/jwujesq8/github-task
 
 ## Prerequisites
 - Java 21
