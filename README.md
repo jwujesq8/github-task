@@ -49,7 +49,7 @@ This service allows users to fetch a list of repositories for a given GitHub use
 - GET /github/{username}/repos: Fetch a list of repositories for a given GitHub username.
   Example usage:
     ````bash
-  curl -X GET "http://localhost:8080/github/jwujesq8/repos"
+  curl -X GET "http://localhost:8080/github/{username}/repos"
 
 ## Responses
 1. 200 - OK
